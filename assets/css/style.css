@@ -1,0 +1,55 @@
+body {
+    background-image: url("../images/starwars.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    color: #04ff00;
+    padding: 5vw;
+}
+
+#luke {
+    background-image: url(../images/luke-skywalker.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 12vw;
+    width:12vw;
+    color: white;
+}
+
+#obi-wan {
+    background-image: url(../images/obi-wan.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 12vw;
+    width:12vw;
+    color: white;
+}
+
+#darth-s {
+    background-image: url(../images/darth-sidious.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 12vw;
+    width:12vw;
+    color: white;
+}
+
+#darth-m {
+    background-image: url(../images/darth-maul.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 12vw;
+    width:12vw;
+    color: white;
+}
+
+#enemies {
+    padding: 10px;
+}
+
+#defender {
+    padding: 10px;
+}
