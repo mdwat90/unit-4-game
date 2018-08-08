@@ -2,10 +2,22 @@ $(document).ready(function () {
     console.log("ready!");
 
 
-    $("#luke").data({"health":"100","attack":"6"})
-    $("#obi-wan").data({"health":"120","attack":"10"})
-    $("#darth-s").data({"health":"180","attack":"15"})
-    $("#darth-m").data({"health":"150","attack":"12"})
+    $("#luke").data({
+        "health": 100,
+        "attack": 6
+    })
+    $("#obi-wan").data({
+        "health": 120,
+        "attack": 10
+    })
+    $("#darth-s").data({
+        "health": 180,
+        "attack": 15
+    })
+    $("#darth-m").data({
+        "health": 150,
+        "attack": 12
+    })
 
 
     $("#enemiesToAttack").hide();
@@ -76,11 +88,11 @@ $(document).ready(function () {
 
 
 
-    $("#yourCharacter").click(function () {
+    $("#yourCharacter").click (function () {
         gameStart();
     });
 
-    $("#enemies").click(function () {
+    $("#enemies").click (function () {
         chooseDefender();
     });
 
@@ -89,19 +101,30 @@ $(document).ready(function () {
     // player's health goes down by attack power of defender
     // increases player's attack power by base attack power
     $("#attack").click(function () {
-        console.log($("#yourCharacter").find("button").data("health") - $("#defender").find("button").data("attack"));
-        console.log($("#defender").find("button").data("health") - $("#yourCharacter").find("button").data("attack"));
+        if ($("#yourCharacter").find("button").data("health") > 0) {
+            console.log($("#yourCharacter").find("button").data("health") - $("#defender").find("button").data("attack"));
+            console.log($("#defender").find("button").data("health") - $("#yourCharacter").find("button").data("attack"));
+            console.log($("#yourCharacter").find("button").data("attack") + $("#yourCharacter").find("button").data("attack"));
+        }
+        
+        // else if all enemies defeated, player wins
+        else if ($("#enemies") === 0) {
+            alert("You Won!");
+            $("#newGame").show();
+        } 
+        
+        // Else player's health goes down to 0 or below, game over
+        else {
+            alert("Game Over!");
+            $("#newGame").show();
+        }
     });
 
 
     // If defender's value goes down to zero and player's health is > 0, defender is defeated, select new enemy
-    // Else if player's health goes down to 0 or below, game over
-    // else all enemies defeated, player wins
+    
 
 
-    
-    
     // To Do:
     // display "value" (health) attribute for each character
-    // assign base attack value for each character
 });

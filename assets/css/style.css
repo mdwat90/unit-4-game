@@ -11,8 +11,8 @@ body {
     background-image: url(../images/luke-skywalker.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 12vw;
-    width:12vw;
+    height: 15vw;
+    width:15vw;
     color: white;
 }
 
@@ -21,8 +21,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 12vw;
-    width:12vw;
+    height: 15vw;
+    width:15vw;
     color: white;
 }
 
@@ -31,8 +31,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 12vw;
-    width:12vw;
+    height: 15vw;
+    width:15vw;
     color: white;
 }
 
@@ -41,8 +41,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 12vw;
-    width:12vw;
+    height: 15vw;
+    width:15vw;
     color: white;
 }
 
@@ -52,4 +52,8 @@ body {
 
 #defender {
     padding: 10px;
+}
+
+#attack {
+    width: 10vw;
 }
