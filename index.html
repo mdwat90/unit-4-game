@@ -21,19 +21,33 @@
             <h2 id="yourCharacterName">Select Your Character</h2>
         </div>
 
+        <audio src="assets/audio/Star Wars- The Imperial March (Darth Vader's Theme).mp3" id="imperialMarch"></audio>
+
         <div class="row" id="yourCharacter">
             <div class="col-2" id="lukerow">
                 <button class="character" id="luke">Luke Skywalker</button>
+                <h2 id="healthLuke"></h2>
             </div>
             <div class="col-2" id="obi-wanrow">
                 <button class="character" id="obi-wan">Obi-Wan Kenobi</button>
+                <h2 id="healthObi"></h2>
             </div>
             <div class="col-2" id="darth-srow">
                 <button class="character" id="darth-s">Darth Sidious</button>
+                <h2 id="healthDarthS"></h2>
             </div>
             <div class="col-2" id="darth-mrow">
                 <button class="character" id="darth-m">Darth Maul</button>
+                <h2 id="healthDarthM"></h2>
             </div>
+        </div>
+
+        <div class="row">
+            <p id="characterHealth"></p>
+        </div>
+        
+        <div class="row">
+            <p id="characterAttack"></p>
         </div>
 
 
@@ -49,14 +63,19 @@
         </div>
 
 
+        <div class="row" id="defender"></div>
+
         <div class="row">
-            <h2 id="defenderName">Defender</h2>
-            </div>
-        <div class="row" id="defender"> </div>
+            <p id="defenderHealth"> </p>
+        </div>
+        
+        <div class="row">
+            <p id="defenderAttack"> </p>
+        </div>
 
 
         <div class="row">
-            <button id="newGame">New Game</button>
+                <button type="button" class="btn btn-secondary" id="newGame">New Game</button>
         </div>
 
     </div>
