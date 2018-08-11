@@ -125,6 +125,8 @@ $(document).ready(function () {
         $("#defenderHealth").text("Health: " + defenderHealth);
         $("#defenderAttack").text("Attack Strength: " + defenderAttack);
 
+        $("#defender").fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+
         // // If defender's value goes down to zero and player's health is > 0, defender is defeated, select new enemy
         if (defenderHealth <= 0 && characterHealth >= 0) {
             alert("Choose new defender!");
