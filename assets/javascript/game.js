@@ -1,7 +1,6 @@
 $(document).ready(function () {
     console.log("ready!");
 
-
     var characterAttack;
     var characterHealth;
     var defenderAttack;
@@ -30,7 +29,6 @@ $(document).ready(function () {
     $("#attack").hide();
     $("#defenderName").hide();
     $("#newGame").hide();
-
 
     function gameStart() {
         var target = $(event.target);
@@ -69,6 +67,7 @@ $(document).ready(function () {
         $("#characterHealth").text("Health: " + characterHealth).show();
         $("#characterAttack").text("Attack Strength: " + characterAttack).show();
     }
+
 
 
     function chooseDefender() {
@@ -141,7 +140,7 @@ $(document).ready(function () {
         }
         // If character health is 0, game over 
         else if (characterHealth <= 0) {
-            alert("You Lose!");
+            alert("You Lost!");
             $("#newGame").show();
             $("#characterHealth").text("Health: " + characterHealth).hide();
             $("#characterAttack").text("Attack Strength: " + characterAttack).hide();
@@ -154,17 +153,24 @@ $(document).ready(function () {
             $("#enemies").hide();
         }
 
-        // if no more defenders in the "enemies to attack" div, you win
-        // if ($("#enemies")) {
-        //     alert("You Won!");
-        //     $("#newGame").show();
-        // }
+        // if no more defenders in the "enemies to attack" div & your health is > 0, you win
+        if ((!$.trim($('#enemies').html()).length) && (characterHealth > 0)) {
+            alert("You Won!");
+            $("#newGame").show();
+            $("#attack").hide();
+            $("#enemiesToAttack").hide();
+        }
 
         // if no defender in the "defender" div, you can not execute attack button
+        // if (!$.trim($('#defender').html()).length) {
+        //     $("#attack").off("click");
+        // }
+
+        // else if ($.trim( $('#defender').html() ).length) {
+        //     $("#attack").on("click");
+        // }
 
     });
-
-    // play music automatically on page load
 
     $("#newGame").click(function () {
         location.reload(true);
