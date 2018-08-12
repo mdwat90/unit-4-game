@@ -30,6 +30,7 @@ $(document).ready(function () {
     $("#defenderName").hide();
     $("#newGame").hide();
 
+
     function gameStart() {
         var target = $(event.target);
         if (target.is("#luke")) {
@@ -100,9 +101,17 @@ $(document).ready(function () {
         $("#defenderAttack").text("Attack Strength: " + defenderAttack).show();
     }
 
+    var obj = document.createElement("audio");
+    obj.src = "assets/audio/Star Wars - The Imperial March.mp3";
+    obj.volume = 0.6;
+    obj.autoPlay = false;
+    obj.preLoad = true;
+    obj.controls = true;
+
 
     $("#yourCharacter").click(function () {
         gameStart();
+        obj.play();
     });
 
     $("#enemies").click(function () {
